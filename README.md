@@ -21,3 +21,7 @@ Setup your DNS so that it points at Github IPs and create a CNAME alias for www 
 | www          | CNAME     | mellowi.github.io |
 
 More from Github documentation: [Setting up apex domain and www subdomain](https://help.github.com/articles/setting-up-an-apex-domain-and-www-subdomain/)
+
+## License
+
+Open sourced under the [MIT license](LICENSE).
