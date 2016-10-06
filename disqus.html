@@ -1,39 +1,51 @@
-<div id="disqus_thread"></div>
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>mej</title>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div id="disqus_thread"></div>
+
 <script>
 window.addEventListener('message', receiveMessage, false);
-function receiveMessage(event)
-{
-    if (event.data) {
-        var msg;
-        try {
-            msg = JSON.parse(event.data);
-        } catch (err) {
-            // Do nothing
-        }
-        if (!msg)
-            return false;
-
-        if (msg.name === 'resize') {
-            window.parent.postMessage({
-              sentinel: 'amp',
-              type: 'embed-size',
-              height: msg.data.height
-            }, '*');
-        }
+function receiveMessage(event){
+  if (event.data) {
+    var msg;
+    try {
+      msg = JSON.parse(event.data);
+    } catch (err) {
+      // Do nothing
     }
+    if (!msg)
+      return false;
+
+    if (msg.name === 'resize') {
+      window.parent.postMessage({
+        sentinel: 'amp',
+        type: 'embed-size',
+        height: msg.data.height
+      }, '*');
+    }
+  }
 }
-</script>
-<script>
-    var disqus_config = function () {
-        this.page.url = window.location;
-        this.page.identifier = window.location.hash;
-    };
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
 
-        s.src = '//mellowi.disqus.com/embed.js';
+var disqus_config = function () {
+  this.page.url = window.location;
+  this.page.identifier = window.location.hash;
+};
+(function() {  // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
 
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+  s.src = '//mellowi.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
 </script>
+
+  </body>
+</html>
