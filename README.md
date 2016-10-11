@@ -14,11 +14,11 @@ More from Github documentation: [Adding or removing a custom domain](https://hel
 
 Setup your DNS so that it points at Github IPs and create a CNAME alias for www subdomain.
 
-| HOST .mej.fi | Type      | Pointing at       |
-| ------------ |:---------:| -----------------:|
-| @            | A         | 192.30.252.153    |
-| @            | A         | 192.30.252.154    |
-| www          | CNAME     | mellowi.github.io |
+| HOST .mej.fi | Type      | Pointing at          |
+| ------------ | --------- | -------------------- |
+| @            | A         | 192.30.252.153       |
+| @            | A         | 192.30.252.154       |
+| www          | CNAME     | [username].github.io |
 
 More from Github documentation: [Setting up apex domain and www subdomain](https://help.github.com/articles/setting-up-an-apex-domain-and-www-subdomain/)
 
