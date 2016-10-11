@@ -12,80 +12,64 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900,900italic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,900,900italic" rel="stylesheet">
     <style amp-custom>
+
 * {
-  margin: 0;
-  padding: 0;
+  -webkit-box-sizing: border-box;
 }
 
-html {
+body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
 
+
 body {
-  margin: 0;
-  padding: 0;
-
-  width: 100%;
-  height: auto;
-
   font-size: 12pt;
   font-weight: 400;
-  background-color: #eff4ed;
-  color: #353d35;
   font-family: 'Open Sans', sans-serif;
+
+  color: #353d35;
+  background-color: #ffffff;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 a {
-  color: #000000;
+  color: #00a948;
 }
 
 ul {
   margin: 0 1em 1em;
 }
 
-.table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
+pre, code {
+  padding: 0 2px;
+  background: #eff4ed;
+  border: 1px solid #e0e9e0;
+  border-radius: 3px;
+  font-size: .9em;
+  font-family: monospace;
 }
-.table-responsive {
-  min-height: .01%;
+
+pre {
+  margin-bottom: 1em;
+  padding: 20px;
   overflow-x: auto;
 }
 
-.page {
-  margin: 0 auto;
-  padding: 10px;
-  max-width: 960px;
-  height: auto;
+pre code {
+  padding: 0;
+  border: 0;
 }
 
-.content-wrapper {
-  border: 1px solid #e0e9e0;
-  border-radius: 3px;
-  background-color: #FFFFFF;
-  margin-bottom: 10px;
-}
-
-.section {
-  display: block;
-  padding: 16px 20px 32px;
-}
-
-.section-header {
-  display: block;
-  padding: 20px 20px 0;
-}
-
-/** FONTS */
+/* fonts */
 
 h1 {
-  margin-bottom: 1em;
-  padding: 0;
-  font-size: 3.75em;
+  margin-top: 2em;
+  font-size: 2em;
   font-weight: 900;
   font-family: 'Lato', sans-serif;
   color: #000000;
@@ -94,9 +78,8 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 1em;
-  padding: 0;
-  font-size: 2.25em;
+  margin-top: 1.25em;
+  font-size: 1.25em;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
   color: #2e2e2e;
@@ -104,17 +87,94 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 1em;
-  padding: 0;
-  font-size: 1.35em;
+  margin-top: 1.1em;
+  font-size: 1.1em;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
+  color: #2e2e2e;
   line-height: 1;
 }
 
 p {
   margin-bottom: 1em;
   font-size: 1em;
+}
+
+.logo {
+  font-size: 4em;
+  font-weight: 900;
+  font-family: 'Lato', sans-serif;
+  color: #80bb80;
+  line-height: 1;
+}
+
+.date {
+  float: right;
+  margin-top: 0.5em;
+  padding-left: 10px;
+  font-size: 0.8em;
+}
+
+/* layout */
+
+section {
+  padding: 100px 50px;
+  min-height: 50%;
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid #e0eae0;
+}
+
+section:nth-child(2n) {
+  background: #fbfffb;
+  border-top: 1px solid #ffffff;
+}
+
+.page {
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 800px;
+}
+
+.content {
+  margin-bottom: 10px;
+}
+
+.jumbotron {
+  text-align: center;
+}
+.jumbotron span {
+  font-size: 0.8em;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+
+/* scaling */
+
+@media screen and (max-width: 960px) {
+  section {
+    padding: 60px 30px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 10pt;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
 }
     </style>
 
@@ -125,33 +185,45 @@ p {
   </head>
   <body>
 
-    <div class="page">
-      <div class="content-wrapper">
-
-        <div class="section-header">
-          <h2>Blog</h2>
-        </div>
-
-        <div class="section">
-
-          <p>Coming soon</p>
-
-        </div>
-
-<!--
-        <div class="section">
-          <amp-iframe width=400 height=140
-                    layout="responsive"
-                    sandbox="allow-scripts allow-same-origin allow-modals allow-popups"
-                    resizable
-                    src="https://mellowi.github.io/disqus.html#test">
-            <div placeholder></div>
-            <div overflow tabindex=0 role=button aria-label="Read more">Read more!</div>
-          </amp-iframe>
-        </div>
--->
+<section>
+  <div class="page">
+    <div class="content">
+      <div class="jumbotron">
+        <div class="logo">mej</div>
+        <span>Technology blog and playground</span>
       </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="page">
+    <div class="content">
+      <span class="date">11th October 2016</span>
+      <h1 id="introduction">Introduction</h1>
+
+<p>
+Hi, I'm Mikko Johansson and this is my personal technology blog and playground. I have had an idea to write a blog for a long time, but I didn't ever get the project started. There were always something blocking me or I was just too busy with other projects. Now finally after some life changing moments, I have time to share some parts of my trip. I'm planning to write mostly about the things that I work with and what interests me in Web technologies. In short, I have been a developer for more than 20 years, and I'm fond about technology in general, programming, web and games.
+</p>
+<p>
+I love clean and simple things. Also performance has always been important for me personally, while I have been trying to get better in my profession. The reason why I finally have pushed myself to write this blog is that my new job isn't so much about these technologies anymore. I decided that I could play with the technologies and create hobby projects and write about those. Maybe this is also a way for me to keep my knowledge up-to-date.
+</p>
+<p>
+I've always had passion in creating websites and Web applications. The current state of Web technologies is really interesting. People talk a lot about cloud, how to scale their websites and applications. Also security and costs of the platforms have been under discussion. There is so much talk about hosting and SaaS (Software as a Service) that I'm thinking if people are forgetting what they are trying to achieve. I've been hearing of huge cloud environments and costs for simple Web applications or even websites. People install a "free" platform to AWS or Azure and pay huge amounts for the hosting. Or the other option is that they buy SaaS solution of the same platform.
+</p>
+<p>
+Creating a website should be easy and simple, but it isn't. There are so many options and most of the ready-made solutions are expensive to host and already obsolete. Blogger, WordPress, Medium, Ghost, Drupal, Joomla and other popular blogging platforms are possible choices only if you have to have a setup ready in 5 minutes. But after that you still you need to use their toolsets and the biggest job with a website is always content. If you want to control the way how you create your content, and the layout of your website, then you don't want to choose these huge platforms. It is actually harder to code your templates to use these platforms than code a static website. Also don't want to have platform with databases that build up unneeded costs for a simple personal blog. Best ways to explain this is to show good examples like <a href="http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/">Obama's fundraising platform</a> and <a href="https://github.com/Conservatory/healthcare.gov-2013-10-01">healthcare.gov</a>. I'll come back later to the technologies mentioned in these links, but the point is that if you want a fast scalable website, you want to minimize the need of backend load. With static websites you don't have a bottle neck and you can't even be that easily hacked, because you don't use a platform with security holes.
+</p>
+<p>
+Some might think that it is cheaper to just pick some free blogging platform or SaaS because developing own custom solution is expensive. If you find the perfect solution for you that covers all the features and expectations that you have for your website, then you should pick that one. For my needs of a personal blog, there were no ready made solutions out there. So the first hobby project is coding this website. The main focus is that the content is easy to create, pages load fast, securely and the hosting is cheap. The static version of my blog is open source and can be found from <a href="https://github.com/mellowi/mellowi.github.io">github.com/mellowi/mellowi.github.io</a>. The ones who know Github Pages already notice that the website is hosted for free. I'll be posting later on a lot about the technologies and solutions that I've chosen to implement my own blog.
+</p>
+<p>
+PS. I didn't yet add a commenting possibility, but I'm thinking of maybe adding Disqus later.
+</p>
+
+    </div>
+  </div>
+</section>
 
   <amp-analytics type="googleanalytics" id="analytics1">
     <script type="application/json">
