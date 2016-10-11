@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>mej</title>
 
-    <link rel="canonical" href="amp.html" />
+    <link rel="canonical" href="http://mej.fi" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta name="author" content="Mikko Johansson">
@@ -135,6 +135,11 @@ section:nth-child(2n) {
   min-height: 10%;
 }
 
+.comments {
+  padding: 30px 15px;
+  min-height: 10%;
+}
+
 .page {
   margin: 0 auto;
   padding: 10px;
@@ -221,6 +226,21 @@ Some might think that it is cheaper to just pick some free blogging platform or 
 PS. I didn't yet add a commenting possibility, but I'm thinking of maybe adding Disqus later.
 </p>
 
+    </div>
+  </div>
+</section>
+
+<section class="comments">
+  <div class="page">
+    <div class="content">
+      <amp-iframe width=400 height=140
+          layout="responsive"
+          sandbox="allow-scripts allow-same-origin allow-modals allow-popups"
+          resizable
+          src="https://mellowi.bitbucket.io/disqus.html#introduction">
+        <div placeholder></div>
+        <div overflow tabindex=0 role=button aria-label="Read more">Read more!</div>
+      </amp-iframe>
     </div>
   </div>
 </section>
