@@ -2,6 +2,16 @@
 
 ## gulp.js build tool
 
+### Features
+
+- Copies assets to the build folder
+- Generates the blog with normal template and AMP template
+- Builds SASS to CSS and includes the CSS in the HTML files
+- Parses metadata from Markdown files
+- Converts Markdown to HTML and includes it in the HTML files
+- Generates the navigation to the main page
+- Automatically watches changes and updates the build accordingly
+
 ### Installing
 
 First you need to install Node.js.
@@ -19,6 +29,7 @@ First you need to install Node.js.
 The default directory structure that the build tool uses:
 
     assets/
+      *.html
       *.png
       *.js
     build/
