@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "connect": "^2.19.3",
-    "gulp": "*",
+    "gulp": "^3.9.1",
     "gulp-clean": "^0.3.0",
     "gulp-front-matter": "^1.0.0",
     "gulp-marked": "^0.2.0",
