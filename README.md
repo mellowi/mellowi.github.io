@@ -16,7 +16,7 @@ First you need to install Node.js.
 
 ### Directory structure
 
-The default directory structure is:
+The default directory structure that the build tool uses:
 
     assets/
       *.png
@@ -34,6 +34,8 @@ The default directory structure is:
       *.scss
     gulpfile.js
     package.json
+
+This is easy to change by modifying the config object from gulpfile.js.
 
 ### Building
 
