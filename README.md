@@ -1,5 +1,50 @@
 # README
 
+## gulp.js build tool
+
+### Installing
+
+First you need to install Node.js.
+
+1. Install [Node](http://nodejs.org/)
+2. Install gulp.js client and development dependencies of the build tool:
+
+```sh
+    npm install -g gulp-cli
+    npm install
+```
+
+### Directory structure
+
+The default directory structure is:
+
+    assets/
+      *.png
+      *.js
+    build/
+      <build result>
+    src/
+      posts/
+        *.md
+      views/
+        index.html
+        *.html
+    styles/
+      index.scss
+      *.scss
+    gulpfile.js
+    package.json
+
+### Building
+
+Here are the main commands to use when building the website. More can be found from gulpfile.js.
+
+```sh
+    gulp          - runs the default build command
+    gulp clean    - removes the build folder
+    gulp watch    - runs a webserver for static content on http://localhost:3000
+```
+
 ## Custom domains for Github Pages
 
 ### Github configuration
