@@ -14,8 +14,6 @@
 
 ### Installing
 
-First you need to install Node.js.
-
 1. Install [Node](http://nodejs.org/)
 2. Install gulp.js client and development dependencies of the build tool:
 
