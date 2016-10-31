@@ -65,9 +65,7 @@ gulp.task('sass', function() {
         outputStyle: 'compressed'
       })
       .on('error', sass.logError))
-    .pipe(cssContentsAssign())
-//    .pipe(rename('style.css'))
-//    .pipe(gulp.dest(path.join(config.build, '/')))
+    .pipe(cssContentsAssign());
 });
 
 //  Pages: Markdown content
@@ -131,7 +129,7 @@ gulp.task('posts', ['sass'], function () {
       path.dirname = path.basename;
       path.basename = 'index';
     }))
-    .pipe(gulp.dest(config.posts.build))
+    .pipe(gulp.dest(config.posts.build));
 });
 
 gulp.task('ampposts', ['sass'], function () {
@@ -145,7 +143,7 @@ gulp.task('ampposts', ['sass'], function () {
       path.dirname = path.basename;
       path.basename = 'index';
     }))
-    .pipe(gulp.dest(config.posts.ampbuild))
+    .pipe(gulp.dest(config.posts.ampbuild));
 });
 
 // Main page
