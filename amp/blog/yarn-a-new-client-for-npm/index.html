@@ -38,12 +38,12 @@
       <span class="date">November 13, 2016</span>
       <hr/>
 <p>Package management has again taken a step forward. <a href="https://yarnpkg.com/">Yarn</a> is a new client for npm to make the development usage faster and more secure without any hassle. Yarn is an open source project that is developed in collaboration between Facebook, Exponent, Google, and Tilde.</p>
-<p>Often when developing Node.js project&#39;s you download over and over again the same packages. You have just downloaded the same set and you need to wait again for the dependencies. Yarn fixes this issue by caching the packages locally on your machine. On top of that, it downloads the packages asynchronously, so the waiting time gets shorter. Yarn also gives added security by checking that the packages checksums are valid.</p>
-<p>Yarn uses the flat way of installing the dependencies like the newer npm clients. This way we get rid of duplicates and we actually decrease the node_modules size. For example this project&#39;s node_modules files decrease from 15 172 to 6 911 files. The flat directory structure is also better for Windows file system, that doesn&#39;t like long directory paths.</p>
+<p>Often when developing Node.js projects you download over and over again the same packages. You have just downloaded the same set and you need to wait again for the dependencies. Yarn fixes this issue by caching the packages locally on your machine. On top of that, it downloads the packages asynchronously, so the waiting time gets shorter. Yarn also gives added security by checking that the packages checksums are valid.</p>
+<p>Yarn uses the flat way of installing the dependencies like the newer npm clients. This way we get rid of duplicates and we actually decrease the node_modules folder&#39;s size. For example this project&#39;s node modules files decrease from 15 172 to 6 911 files. The flat directory structure is also better for Windows file system, that doesn&#39;t like long paths.</p>
 <p>You should already use yarn for most the projects that you have package.json for. Yarn doesn&#39;t yet work with private packages, but otherwise it has a good set of features already. More about <a href="https://yarnpkg.com/en/docs/migrating-from-npm">migrating from npm to Yarn</a>.</p>
 <p>Yarn is a drop in placement for npm client. Easiest way to install it is:</p>
 <pre><code>npm install -g yarn</code></pre>
-<p>If you don&#39;t have Node.js already installed, I suggest you read <a href="https://yarnpkg.com/en/docs/install">the official install guides</a>.</p>
+<p>If you don&#39;t have Node.js already installed, I suggest that you read <a href="https://yarnpkg.com/en/docs/install">the official install guides</a>.</p>
 <p>Here are some of the most common commands that get you going.</p>
 <h3 id="starting-a-new-project">Starting a new project</h3>
 <pre><code>yarn init</code></pre>
