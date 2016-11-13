@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>mej</title>
 
+    <link rel="amphtml" href="http://mej.fi/amp/blog/yarn-a-new-client-for-npm">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta name="author" content="Mikko Johansson">
 
@@ -27,33 +29,65 @@
 <section>
   <div class="page">
     <div class="content">
-      <h1>Blog Posts</h1>
+      <h1>Yarn, a new client for npm</h1>
+      <span class="date">November 13, 2016</span>
       <hr/>
-
-<dl class="posts">
-
-  <dt>November 13, 2016</dt>
-  <dd><a href="./blog/yarn-a-new-client-for-npm">Yarn, a new client for npm</a></dd>
-
-  <dt>November 05, 2016</dt>
-  <dd><a href="./blog/yassgen">YASSGen - Yet Another Static Site Generator</a></dd>
-
-  <dt>October 25, 2016</dt>
-  <dd><a href="./blog/building-a-website-with-gulpjs">Building a website with gulp.js</a></dd>
-
-  <dt>October 18, 2016</dt>
-  <dd><a href="./blog/generating-a-static-website">Generating a static website</a></dd>
-
-  <dt>October 11, 2016</dt>
-  <dd><a href="./blog/introduction">Introduction</a></dd>
-
-</dl>
+<p>Package management has again taken a step forward. <a href="https://yarnpkg.com/">Yarn</a> is a new client for npm to make the development usage faster and more secure without any hassle. Yarn is an open source project that is developed in collaboration between Facebook, Exponent, Google, and Tilde.</p>
+<p>Often when developing Node.js project&#39;s you download over and over again the same packages. You have just downloaded the same set and you need to wait again for the dependencies. Yarn fixes this issue by caching the packages locally on your machine. On top of that, it downloads the packages asynchronously, so the waiting time gets shorter. Yarn also gives added security by checking that the packages checksums are valid.</p>
+<p>Yarn uses the flat way of installing the dependencies like the newer npm clients. This way we get rid of duplicates and we actually decrease the node_modules size. For example this project&#39;s node_modules files decrease from 15 172 to 6 911 files. The flat directory structure is also better for Windows file system, that doesn&#39;t like long directory paths.</p>
+<p>You should already use yarn for most the projects that you have package.json for. Yarn doesn&#39;t yet work with private packages, but otherwise it has a good set of features already. More about <a href="https://yarnpkg.com/en/docs/migrating-from-npm">migrating from npm to Yarn</a>.</p>
+<p>Yarn is a drop in placement for npm client. Easiest way to install it is:</p>
+<pre><code>npm install -g yarn</code></pre>
+<p>If you don&#39;t have Node.js already installed, I suggest you read <a href="https://yarnpkg.com/en/docs/install">the official install guides</a>.</p>
+<p>Here are some of the most common commands that gets you going.</p>
+<h3 id="starting-a-new-project">Starting a new project</h3>
+<pre><code>yarn init</code></pre>
+<h3 id="adding-a-dependency">Adding a dependency</h3>
+<pre><code>yarn add [package]
+yarn add [package]@[version]
+yarn add [package]@[tag]</code></pre>
+<h3 id="updating-a-dependency">Updating a dependency</h3>
+<pre><code>yarn upgrade [package]
+yarn upgrade [package]@[version]
+yarn upgrade [package]@[tag]</code></pre>
+<h3 id="removing-a-dependency">Removing a dependency</h3>
+<pre><code>yarn remove [package]</code></pre>
+<h3 id="installing-all-the-dependencies-of-project">Installing all the dependencies of project</h3>
+<pre><code>yarn</code></pre>
+<p>or</p>
+<pre><code>yarn install</code></pre>
+<p>This command creates yarn.lock that you should include in your repository.</p>
 
     </div>
   </div>
 </section>
 
+<section class="comments">
+  <div class="page">
+    <div class="content">
+      <div id="disqus_thread"></div>
+    </div>
+  </div>
+</section>
+
 <script type="text/javascript">
+  var disqus_config = function () {
+      var pageURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      this.page.url = pageURL;
+      this.page.identifier = "blog-yarn-a-new-client-for-npm"; // + window.location.hash (if app)
+  };
+
+  (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//mellowi.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+  })();
+
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-12469642-2']);
   _gaq.push(['_setDomainName', 'mej.fi']);
