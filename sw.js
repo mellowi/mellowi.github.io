@@ -1,4 +1,4 @@
-var CACHE_NAME = 'mej-v4';
+var CACHE_NAME = 'mej-v1';
 var urlsToCache = [
   '.',
   'index.html',
@@ -27,11 +27,11 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  console.log('Fetch event for ', event.request.url);
+  //console.log('Fetch event for ', event.request.url);
   event.respondWith(
     caches.match(event.request).then(function(response) {
       if (response) {
-        console.log('Found ', event.request.url, ' in cache');
+        //console.log('Found ', event.request.url, ' in cache');
         return response;
       }
 
@@ -45,7 +45,7 @@ self.addEventListener('fetch', function(event) {
         return caches.open(CACHE_NAME).then(function(cache) {
           if (event.request.url.indexOf('blog/') > 0) {
             cache.put(event.request.url, response.clone());
-            console.log('Cached ', event.request.url.indexOf('blog'),  event.request.url);
+            //console.log('Cached ', event.request.url.indexOf('blog'),  event.request.url);
           }
 
           return response;
@@ -53,7 +53,7 @@ self.addEventListener('fetch', function(event) {
       });
 
     }).catch(function(error) {
-      console.log('Error, ', error);
+      //console.log('Error, ', error);
       return caches.match('offline.html');
     })
   );
