@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>mej</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="author" content="Mikko Johansson">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#00a948"/>
+
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="icon" sizes="192x192" href="/images/icon-192x192.png"/>
+    <link rel="icon" sizes="128x128" href="/images/icon-128x128.png"/>
+    <link rel="apple-touch-icon" sizes="128x128" href="/images/icon-128x128.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/images/icon-128x128.png"/>
+
+    <style>{{ css|safe }}
+    </style>
+  </head>
+  <body>
+
+<section>
+  <div class="page">
+    <div class="content">
+      <h1>Page Not Cached</h1>
+      <hr/>
+      <p>The resource you requested has not been cached. It is not viewable offline!</p>
+      <p><a href="/">Back to the main page</a></p>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12469642-2']);
+  _gaq.push(['_setDomainName', 'mej.fi']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
