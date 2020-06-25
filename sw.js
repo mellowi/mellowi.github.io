@@ -6,6 +6,12 @@ var urlsToCache = [
   'offline.html',
   'disqus.html',
 
+  'images/icon-128x128.png',
+  'images/icon-192x192.png',
+  'images/icon-256x256.png',
+  'images/icon-384x384.png',
+  'images/icon-512x512.png',
+
   'fonts/Lato_700_latin.woff2',
   'fonts/Lato_900_latin.woff2',
   'fonts/Roboto_Italic_400_latin.woff2',
