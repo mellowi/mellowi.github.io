@@ -6,6 +6,8 @@ var urlsToCache = [
   'offline.html',
   'disqus.html',
 
+  'manifest.json',
+
   'images/icon-128x128.png',
   'images/icon-192x192.png',
   'images/icon-256x256.png',
